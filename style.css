@@ -1,0 +1,120 @@
+/* Global Styles */
+/* These styles provide a consistent look and feel across the entire website. */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* Default text color*/
+    background-color: #f9f9f9; /* Background color of the wesbite */
+    scroll-behavior: smooth; /* When you click on nav links this make it scroll smoothly */
+}
+
+h1, h2, h3 {
+    margin: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333; 
+    padding: 1rem; /* Adds spacing */
+    position: sticky; /* Keeps the navbar visible at the top while scrolling. */
+    top: 0;
+    z-index: 1000; 
+}
+
+.nav-list {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 2rem; 
+}
+
+.nav-list a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; 
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+/* The hero is used for the introduction page */
+.hero {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: linear-gradient(135deg, #6C63FF, #8360c3); 
+    color: white; 
+    text-align: center;
+    padding: 1em; /* Adds some spacing around the content. */
+}
+
+.hero-title span {
+    color: #FFD700; 
+    font-weight: 600;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.8em 2em; 
+    background: #FFD700; 
+    color: #333; 
+    font-weight: 600;
+    border-radius: 25px; /* Rounded corners. */
+    transition: all 0.3s ease; 
+}
+
+/* Sections */
+.section {
+    padding: 3em 1em; 
+    text-align: center; 
+}
+.personal-card{
+    padding: 3em 1em; 
+    width:75%;
+    margin: auto;
+}
+
+.project-grid {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.project-card {
+    background: white; 
+    padding: 1.5em; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    max-width: 300px; 
+    text-align: left; 
+}
+
+.project-link {
+    color: #6C63FF; 
+    font-weight: 600; 
+    margin-top: 1em;  
+    display: inline-block;
+}
+
+/* Footer */
+.footer {
+    background: #333; 
+    color: white; 
+    text-align: center;
+    padding: 1.5em 0; 
+}
