@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Palindrome Checker</title>
+        <link rel="stylesheet" href="style.css">
+        <Style>
+            .footer {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 1.5em 0;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+            }
+            /* Palindrome Checker Styling */
+            .checker-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh; /* Full page height */
+                text-align: center;
+            }
+    
+            h1 {
+                color: #6C63FF; /* Matches the theme */
+                font-size: 2.5rem;
+                margin-bottom: 1em;
+            }
+    
+            input[type="text"] {
+                width: 80%;
+                max-width: 400px;
+                padding: 0.8em;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                margin-bottom: 1em;
+            }
+    
+            button {
+                padding: 0.8em 2em;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #fff;
+                background-color: #6C63FF;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            }
+    
+            button:hover {
+                background-color: #8360c3;
+            }
+    
+        </Style>
+    </head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="/index.html#about">About Me</a></li>
+            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a href="/index.html#experience">Experience</a></li>
+            <li><a href="/index.html#personal">Personal</a></li>
+            <li><a href="https://github.com/gavinmcdavitt"><img id = 'GithubCat'src ='/Media/GitHub_Invertocat_Logo.svg.png' /></a></li>
+            <li><a href="https://www.linkedin.com/in/gavin-mcdavitt/"> <img id = 'LinkedIn'src = '/Media/LinkedIn_logo.png' /></a></li>
+            <li><a href="https://www.salesforce.com/trailblazer/pbxvr2rt321yli3xdi"><img id = 'Trailheads' src = '/Media/Trailhead.png' /></a></li>
+        </ul>
+    </nav>
+    <h1> Palindrome Checker</h1>
+    <input id = "input" type = "text" placeholder="type in a palindrome "/>
+    <button onclick = "check()">Check</button>  
+    <script src = "index.js"></script>
+</body>
+</html>
