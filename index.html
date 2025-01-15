@@ -6,6 +6,38 @@
     <title>Personal Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Function to update CSS variables dynamically
+        function updateAnimationSpeedAndCount(rotateSpeed, count) {
+            const root = document.documentElement;
+
+            // Set CSS variables dynamically
+            root.style.setProperty('--rotate-speed', 10);
+            root.style.setProperty('--count', 4);
+
+            // Trigger a reflow to ensure the CSS changes take effect
+            root.offsetHeight;
+        }
+
+        // Event listeners for inputs
+        document.addEventListener('DOMContentLoaded', () => {
+            const rotateSpeedInput = document.getElementById('rotate-speed');
+            const countInput = document.getElementById('count');
+
+            rotateSpeedInput.addEventListener('input', () => {
+                const speed = rotateSpeedInput.value;
+                const count = countInput.value;
+                updateAnimationSpeedAndCount(speed, count);
+            });
+
+            countInput.addEventListener('input', () => {
+                const speed = rotateSpeedInput.value;
+                const count = countInput.value;
+                updateAnimationSpeedAndCount(speed, count);
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -16,7 +48,7 @@
             <li><a href="/index.html#personal">Personal</a></li>
             <li><a href="https://github.com/gavinmcdavitt"><img id = 'GithubCat'src ='/Media/GitHub_Invertocat_Logo.svg.png' /></a></li>
             <li><a href="https://www.linkedin.com/in/gavin-mcdavitt/"> <img id = 'LinkedIn'src = '/Media/LinkedIn_logo.png' /></a></li>
-            <li><a href="https://www.salesforce.com/trailblazer/pbxvr2rt321yli3xdi"><img id = 'Trailheads' src = '/Media/Trailhead.png' /></a></li>
+            <li><a href="https://www.salesforce.com/trailblazer/pbxvr2rt321yli3xdi"><img id = 'Trailheads' src = '/Media/trailhead.png' /></a></li>
         </ul>
     </nav>
     <header class="hero" id="hero">
@@ -42,18 +74,18 @@
                 <div class="project-card">
                     <h3>State Park Reservation System</h3>
                     <p>This project solves an everlying issue with the Florida State Park system. Florida State Parks
-                        do not currently have a reservation system in place. This leads to many Floridians having an 
-                        unenjoyable experience in the real Florida. Built in React + Firebase. 
+                        do not currently have a reservation system in place. This leads to many Floridians having an
+                        unenjoyable experience in the real Florida. Built in React + Firebase.
                     </p>
                     <a href="https://github.com/gavinmcdavitt/StateParkApp" class="project-link">View on GitHub</a>
 
                 </div>
                 <div class="project-card">
                     <h3>Python to help me Walk the St. Marks Tallahassee Path</h3>
-                    <p> In this project, I utilized the python libraries: 
+                    <p> In this project, I utilized the python libraries:
                         Beautiful Soup and openpyxl. This allowed me to web scrape the data about future games including:
                         Home, Away, Over-Under, Home Spread. I would print these to a excel sheet, to keep track of each week's
-                        games. 
+                        games.
                     </p>
                     <a href="https://github.com/gavinmcdavitt/McDavitt-Walk-of-Shame" class="project-link">View on GitHub</a>
                 </div>
@@ -83,9 +115,9 @@
                     <h3>Salesforce Developer Intern</h3>
                     <p>Florida State University ITS | May 2024 - Current</p>
                     <ul>
-            <li> Created a Lightning Web Component (LWC) to enhance and streamline the web-to-case submission process.</li> 
-            <li> Developed a comprehensive application for secure authentication and seamless onboarding of interns. </li>  
-            <li> Managed and maintained Roles, Groups, Queues, and Case Assignment Rules to optimize operational workflows.</li>  
+            <li> Created a Lightning Web Component (LWC) to enhance and streamline the web-to-case submission process.</li>
+            <li> Developed a comprehensive application for secure authentication and seamless onboarding of interns. </li>
+            <li> Managed and maintained Roles, Groups, Queues, and Case Assignment Rules to optimize operational workflows.</li>
             <li> Designed and implemented a flow to automate task creation, improving team efficiency.</li>
                     </ul>
                 </div>
@@ -95,12 +127,12 @@
                     <h3>Emerging Technologies Intern</h3>
                     <p>Florida State University ITS | January 2024 - April 2024</p>
                     <ul>
-            <li> Created custom templates and styled Drupal components to match branding and design guidelines. </li> 
-            <li> Partnered with the Service Desk Manager to build components alongside client data. </li>  
-            <li> Collaborated to create an entire page for the Internship Coordinator, designed for the needs of the University.</li>  
+            <li> Created custom templates and styled Drupal components to match branding and design guidelines. </li>
+            <li> Partnered with the Service Desk Manager to build components alongside client data. </li>
+            <li> Collaborated to create an entire page for the Internship Coordinator, designed for the needs of the University.</li>
             <li>Regularly presented updates to upper management, explaining how we update the current code.</li>
                     </ul>
-                    
+
                 </div>
             </div>
         </section>
@@ -114,7 +146,7 @@
                     </p>
                 </div>
         </section>
-        
+
         <footer class="footer">
             <p>Gavin McDavitt</p>
         </footer>
