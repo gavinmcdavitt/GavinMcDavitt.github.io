@@ -49,7 +49,7 @@
             color: #535062;
             animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
 
-            overflow: hidden;
+            overflow: hidden !important;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
