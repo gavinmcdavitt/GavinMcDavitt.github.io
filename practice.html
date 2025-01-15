@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Animation</title>
+    <title>Document</title>
     <link rel="stylesheet" href="practice.css">
+    
 </head>
 <body>
     <div class="page-container">
@@ -28,54 +29,6 @@
             <div class="mask"></div>
             <div class="center-circle"></div>
         </div>
-    <script>
-        // Function to update CSS variables dynamically
-        function updateAnimationSpeedAndCount(rotateSpeed, count) {
-            const root = document.documentElement;
-            
-            // Set CSS variables dynamically
-            root.style.setProperty('--rotate-speed', 10);
-            root.style.setProperty('--count', 4);
-            
-            // Trigger a reflow to ensure the CSS changes take effect
-            root.offsetHeight;
-        }
-
-        // Event listeners for inputs
-        document.addEventListener('DOMContentLoaded', () => {
-            const rotateSpeedInput = document.getElementById('rotate-speed');
-            const countInput = document.getElementById('count');
-            
-            rotateSpeedInput.addEventListener('input', () => {
-                const speed = rotateSpeedInput.value;
-                const count = countInput.value;
-                updateAnimationSpeedAndCount(speed, count);
-            });
-
-            countInput.addEventListener('input', () => {
-                const speed = rotateSpeedInput.value;
-                const count = countInput.value;
-                updateAnimationSpeedAndCount(speed, count);
-            });
-        });
-    </script>
-</head>
-<body>
-    <div class="void" id="void">
-        <div class="crop">
-            <ul id="card-list">
-                <li><div class="card"><a href=""><span class="model-name">Python</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-                <li><div class="card"><a href=""><span class="model-name">React + Firebase</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-                <li><div class="card"><a href=""><span class="model-name">Salesforce</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-                <li><div class="card"><a href=""><span class="model-name">Chess</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-    
-            </ul>
-            <div class="last-circle"></div>
-            <div class="second-circle"></div>
-        </div>
-        <div class="mask"></div>
-        <div class="center-circle"></div>
-        
     </div>
 </body>
 </html>
