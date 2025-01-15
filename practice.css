@@ -1,6 +1,6 @@
         :root {
-            --rotate-speed: 40;
-            --count: 8; /* Default count, the DOM element should override this */
+            --rotate-speed: 10;
+            --count: 6; /* Default count, the DOM element should override this */
             --easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
             --easing: cubic-bezier(0.000, 0.37, 1.000, 0.63);
         }
@@ -172,3 +172,16 @@
             display: block;
             background-image: linear-gradient(180deg, rgba(60, 26, 229, 0) 0%, #3C1AE5 50%, rgba(60, 26, 229, 0) 100%);
         }
+        .card-open{
+            Border: 10px;
+            border-color: red;
+            color:blue;
+            text-align: center;
+            height:500px;
+            Width:500px;
+            position: absolute; 
+            left: 515px;
+            bottom: 85px;
+            z-index: 2; /* Ensures it is above the mask */
+            background-color: #3B2ED0;
+}
