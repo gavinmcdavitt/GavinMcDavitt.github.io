@@ -11,9 +11,6 @@
             position: relative;
             aspect-ratio: 1 / 1;
         }
-        .void ul:hover * {
-            animation-play-state: paused;
-        }
         .void ul {
             list-style-type: none;
             margin: 0;
