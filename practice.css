@@ -1,6 +1,6 @@
         :root {
-            --rotate-speed: 40;
-            --count: 8; /* Default count, the DOM element should override this */
+            --rotate-speed: 10;
+            --count: 6; /* Default count, the DOM element should override this */
             --easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
             --easing: cubic-bezier(0.000, 0.37, 1.000, 0.63);
         }
@@ -212,3 +212,4 @@
             width: 400px;
             z-index: 20;
         }
+
