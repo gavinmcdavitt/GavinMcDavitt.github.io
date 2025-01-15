@@ -11,9 +11,6 @@
             position: relative;
             aspect-ratio: 1 / 1;
         }
-        .void ul:hover * {
-            animation-play-state: paused;
-        }
         .void ul {
             list-style-type: none;
             margin: 0;
@@ -187,4 +184,4 @@
             bottom: 85px;
             z-index: 2; /* Ensures it is above the mask */
             background-color: #3B2ED0;
-        }
+}
