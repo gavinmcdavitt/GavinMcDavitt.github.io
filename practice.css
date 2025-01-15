@@ -48,6 +48,10 @@
             line-height: 20px;
             color: #535062;
             animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         .void a {
             text-decoration: none;
@@ -182,18 +186,17 @@
         
         .flexbox {
             position: absolute;
-            top: -10%;
-            left: 0%; /* This places the box in the left half and then shifts it to the left quarter */
-            width: 50%; /* Makes the flexbox box take up half of the left half */
+            top: -2%;
+            left: 1%; /* This places the box in the left half and then shifts it to the left quarter */
+            width: 60%; /* Makes the flexbox box take up half of the left half */
             height: 100%; /* Make the flexbox take the full height of the left section */
-
             display: flex;
             justify-content: center;
             align-items: center;
           }
-      
-          
-        
+          .flexbox.hidden {
+            display: none;
+        }
         .flex-item {
             display: flex;
             flex-direction: column;
@@ -209,7 +212,7 @@
             font-size: 14px;
             line-height: 20px;
             color: #535062;
-            width: 400px;
+            width: 650px;
             z-index: 20;
         }
 
