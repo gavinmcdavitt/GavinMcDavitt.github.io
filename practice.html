@@ -3,14 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects done</title>
     <link rel="stylesheet" href="practice.css">
+    <script>
+        function copyCardTextById(id) {
+            // Select the card element by its ID
+            const card = document.getElementById(id);
+        
+            if (card) {
+                // Get the `model-name` text and other text content
+                const modelName = card.querySelector('.model-name')?.textContent || '';
+                const otherText = [...card.querySelectorAll('span')]
+                    .filter(span => !span.classList.contains('model-name'))
+                    .map(span => span.textContent)
+                    .join(' ');
+        
+                // Update the flexbox with the formatted content
+                const flexItem = document.querySelector('.flexbox .flex-item');
+                if (flexItem) {
+                    flexItem.innerHTML = `
+                        <h2>${modelName}</h2>
+                        <p>${otherText}</p>
+                    `;
+                }
+        
+                // Make the flexbox visible
+                const flexbox = document.querySelector('.flexbox');
+                if (flexbox) {
+                    flexbox.classList.remove('hidden');
+                }
+        
+                // Log to console for verification
+                console.log('Updated flexbox with:', { modelName, otherText });
+            } else {
+                console.error('Card with ID', id, 'not found.');
+            }
+        }
+        
+    </script>
     
 </head>
 <body>
     <div class="page-container">
         <!-- Flexbox container for interacting elements -->
-        <div class="flexbox">
+        <div class="flexbox hidden">
             <div class="flex-item">Item 1</div>
         </div>
 
@@ -18,10 +54,30 @@
         <div class="void" id="void">
             <div class="crop">
                 <ul id="card-list" style="--count: 4;">
-                    <li><div class="card"><a href=""><span class="model-name">Gretel-ACTGAN</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-                    <li><div class="card"><a href=""><span class="model-name">Gretel-ACTGAN</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-                    <li><div class="card"><a href=""><span class="model-name">Gretel-ACTGAN</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
-                    <li><div class="card"><a href=""><span class="model-name">Gretel-ACTGAN</span><span>Model for generating highly dimensional, mostly numeric, tabular data</span></a></div></li>
+                    <li><div class="card" id ='card-1' onclick="copyCardTextById('card-1')"><a><span class="model-name">Slide 1</span><span>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel sagittis diam. Phasellus at felis pretium velit imperdiet hendrerit. Curabitur at pharetra libero, vel facilisis turpis. Nulla eu sollicitudin dolor. Suspendisse elementum eros ut mi tincidunt, sit amet feugiat nunc eleifend. Morbi ligula mi, fermentum id imperdiet id, ultrices eget nunc. Nunc ante odio, finibus et tristique sit amet, viverra a erat. Sed sollicitudin risus orci, non fermentum neque facilisis vitae. Sed placerat molestie elit a interdum. Duis ut lorem ac tellus varius commodo.
+                        
+                        Donec ornare velit eget consectetur euismod. Nullam ultrices sapien leo, nec consectetur quam dapibus sed. Curabitur placerat purus nec urna iaculis, feugiat sollicitudin dolor consectetur. Nunc a libero id metus auctor placerat quis et nisl. Integer orci quam, ultricies congue lorem non, ullamcorper imperdiet lectus. Fusce nunc quam, semper vel tempor in, dictum iaculis nisl. Donec consequat sollicitudin accumsan. Nam ut ligula eu dolor iaculis tristique. Proin aliquet ex dui, ut aliquam arcu sollicitudin eget. Sed non faucibus lectus. Curabitur fringilla est id quam mattis, sit amet suscipit neque aliquam. Phasellus fringilla lectus dolor, in dapibus sem condimentum ut. Aenean quis volutpat metus. Pellentesque vel ullamcorper nisi, in congue orci. Nunc ut sem sit amet tellus auctor laoreet. Maecenas ut aliquet massa.
+                        
+                        Integer mattis velit sed enim faucibus bibendum. Aenean et orci enim. Pellentesque interdum arcu magna, eget auctor metus scelerisque sed. Mauris mattis posuere laoreet. Quisque at imperdiet quam, at viverra orci. Nunc ornare at purus eget efficitur. Praesent in orci massa. Suspendisse commodo ante arcu, in scelerisque urna aliquam eget. Curabitur varius egestas velit in convallis. Donec vehicula orci nec sem vestibulum, in pretium nunc viverra. Morbi ut elementum augue. Nulla fringilla egestas dapibus. Phasellus non convallis eros. Praesent nec consectetur velit. Sed ultricies lorem enim, sed volutpat diam tristique sed. Nunc sollicitudin non magna sit amet egestas. </span></a></div></li>
+                    <li><div class="card" id ='card-2' onclick="copyCardTextById('card-2')"><a><span class="model-name">Slide 2</span><span>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit tempor sapien, sit amet facilisis dui faucibus suscipit. Nunc erat dolor, imperdiet at est nec, eleifend tempor augue. Fusce dignissim est in est feugiat, eget commodo ex interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eleifend, quam at fermentum volutpat, tortor turpis condimentum lacus, vel tincidunt ipsum purus nec ante. Vivamus tempor dolor nec mollis semper. Phasellus pharetra ut purus a congue. Curabitur bibendum nunc id eros rutrum vestibulum. Morbi vel lorem diam.
+                        
+                        Curabitur ac suscipit risus. Mauris rutrum malesuada elit ut pellentesque. Aenean et dui accumsan, consectetur magna id, malesuada magna. Nulla vitae sem at purus egestas bibendum. Phasellus eget sem at turpis mattis hendrerit in quis magna. Vestibulum egestas, velit vel luctus commodo, libero erat pulvinar odio, faucibus tempus libero felis a magna. Vestibulum vitae vestibulum felis. Vivamus interdum, diam eget fringilla dictum, augue ipsum interdum purus, id maximus justo tortor id turpis. Suspendisse commodo vehicula bibendum. Nam ultricies eros in ex cursus, at tempus tellus ultrices. Nulla consectetur pulvinar risus, porttitor hendrerit mi ultricies in. Morbi a erat at enim molestie pellentesque. Sed hendrerit eros efficitur nisl placerat, sit amet fringilla risus tincidunt. Phasellus iaculis nulla at justo faucibus finibus. Nullam porttitor tincidunt nibh, sit amet sagittis nisi aliquet nec. Proin rutrum volutpat sapien a tempus.
+                        
+                        Phasellus tristique nunc in tortor ornare, quis aliquet leo blandit. Maecenas vel leo at tortor feugiat blandit. Vestibulum mollis sapien velit, eleifend accumsan ex semper et. Maecenas sit amet pretium justo. Cras a ex nulla. Vivamus ante elit, gravida ut eros eget, lobortis mollis nisl. Donec nec arcu luctus lorem volutpat dignissim eget eu massa.
+                        
+                        Pellentesque sit amet consectetur justo, placerat sagittis risus. Suspendisse luctus convallis ante eu suscipit. Etiam in quam cursus, sollicitudin sem sed, rhoncus purus. Donec pharetra ullamcorper maximus. Duis elementum pretium finibus. Etiam imperdiet posuere velit non fringilla. Sed et luctus magna. Integer feugiat enim in blandit tincidunt. Aliquam faucibus pulvinar lorem eleifend volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies leo diam, sed ultricies est blandit vel. Phasellus dapibus nisi in ipsum viverra varius. Donec blandit lorem nibh, a lacinia enim ornare at. Nulla dignissim metus enim, in pellentesque nulla lacinia sed. Sed auctor mattis accumsan.
+                        
+                        Integer vitae molestie nisi. Duis ut purus posuere, molestie tellus id, tristique ante. Proin vehicula metus ante, et malesuada libero commodo at. Aliquam sollicitudin libero tincidunt ornare varius. Mauris risus ante, sagittis nec vehicula egestas, suscipit a urna. Vestibulum id mollis nunc. Donec nisl enim, vulputate vitae ex sagittis, eleifend blandit mauris. </span></a></div></li>
+                    <li><div class="card" id ='card-3' onclick="copyCardTextById('card-3')"><a><span class="model-name">Slide 3</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim libero et lorem suscipit semper. Vivamus finibus elementum orci ut commodo. Cras nec bibendum lorem. In hac habitasse platea dictumst. Donec condimentum turpis et fringilla bibendum. Vivamus dictum lobortis elementum. Suspendisse potenti. Nullam rhoncus eget leo non eleifend. Vestibulum nisi felis, dictum quis scelerisque non, aliquam rhoncus dui. Donec rutrum bibendum vulputate. Sed gravida, metus a tincidunt pharetra, lectus libero imperdiet magna, non porta eros justo in metus. Donec lobortis eros arcu, eget vestibulum quam facilisis a. Suspendisse vitae massa venenatis, dapibus ipsum in, eleifend eros. Donec efficitur nisi ac justo tincidunt gravida. </span></a></div></li>
+                    <li><div class="card" id ='card-4' onclick="copyCardTextById('card-4')"><a><span class="model-name">Slide 4</span><span>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis, justo non hendrerit condimentum, nunc ligula convallis diam, eu elementum eros dolor ut lectus. Ut pharetra purus ex, eget sagittis libero auctor in. Donec id quam condimentum, placerat diam at, suscipit nisi. Vestibulum tincidunt quam ac vulputate bibendum. Vestibulum finibus eros eget lectus rhoncus maximus. Aliquam in tristique nibh, a consectetur tortor. Integer suscipit sem eget ex lacinia dignissim. Nunc tincidunt enim erat, vel posuere velit suscipit in. Vivamus pulvinar vel metus ut iaculis. Mauris interdum sodales suscipit. Proin faucibus eleifend magna.
+                        
+                        Vivamus porttitor nibh eu diam mattis, in molestie nisl egestas. Vestibulum non nunc a ipsum fermentum tempor. Donec a pellentesque tellus, at sagittis dolor. Praesent odio libero, ullamcorper non aliquam id, suscipit a tortor. Quisque vel consequat enim. Aenean vestibulum, purus vel maximus condimentum, dui metus aliquet magna, commodo tincidunt libero justo id nisi. Fusce faucibus vehicula nibh, id aliquet orci tincidunt vel. Curabitur tincidunt massa eu erat tincidunt, at malesuada purus iaculis. Fusce efficitur iaculis ipsum id posuere. Maecenas varius tincidunt turpis quis congue. Nullam et eleifend risus. Praesent vestibulum tincidunt odio, id tristique nisl condimentum et. Duis sed nunc eget ipsum gravida molestie. Nam ultricies, felis eu condimentum eleifend, enim lorem placerat odio, et tempus dui nunc vitae enim. Vivamus lacinia risus faucibus elit finibus, sed rhoncus magna consectetur. </span></a></div></li>
                 </ul>
                 <div class="last-circle"></div>
                 <div class="second-circle"></div>
