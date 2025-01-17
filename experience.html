@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects done</title>
+    <link rel="stylesheet" href="experience.css">
+    <script>
+        function copyCardTextById(id) {
+            // Select the card element by its ID
+            const card = document.getElementById(id);
+        
+            if (card) {
+                // Get the `model-name` text and other HTML content
+                const modelName = card.querySelector('.model-name')?.textContent || '';
+        
+                // Exclude the modelName (header) from otherContent by filtering out the span containing modelName
+                let otherContent = [...card.querySelectorAll('span')]
+                    .filter(span => !span.classList.contains('model-name'))
+                    .map(span => span.innerHTML) // Use innerHTML to preserve links and formatting
+                    .join(' ');
+        
+        
+                // Select the flex item for dynamic content insertion
+                const flexItem = document.querySelector('.flexbox .flex-item');
+                if (flexItem) {
+                    flexItem.innerHTML = `
+                            <span class= 'model-name'>${modelName}</span>
+                            <p>${otherContent}</p>
+                        `;
+        
+                    // Apply styles dynamically to preserve flexbox behavior
+                    flexItem.style.display = 'flex';
+                    flexItem.style.flexDirection = 'column';
+                    flexItem.style.alignItems = 'center'; // Adjust based on your styling
+                }
+        
+                // Ensure flexbox is visible
+                const flexbox = document.querySelector('.flexbox');
+                if (flexbox) {
+                    flexbox.classList.remove('hidden');
+        
+                    // Preserve flexbox layout and centering
+                    flexbox.style.display = 'flex';
+                    flexbox.style.justifyContent = 'center';
+                    flexbox.style.alignItems = 'center';
+                }
+        
+                // Log to console for verification
+                console.log('Updated flexbox with:', { modelName, otherContent });
+            } else {
+                console.error('Card with ID', id, 'not found.');
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Flexbox container for interacting elements -->
+        <div class="flexbox hidden">
+            <div class="flex-item" id="FlexItem">Item 1</div>
+        </div>
+
+        <!-- Circular container -->
+        <div class="void" id="void">
+            <div class="crop">
+                <ul id="card-list" style="--count: 4;">
+                    <li><div class="card" id ='card-1' onclick="copyCardTextById('card-1')"><span class="model-name">React + Firebase</span><span>
+
+                        
+                        For my senior Capstone project, I wanted to solve a problem that currently exists with the Florida State Park System. I also wanted to
+                        learn a new technology that I had never used. Those were the goals that I made for myself. This group project allowed me to 
+                        learn basic React components. I used Firebase as my backend, utilizing the real-time database. It allowed me to create endpoints to interact 
+                        with data about whether or not a state park was open and if you wanted to create a reservation you could. For the UI, leveraging Leaflet allowed
+                        for us to create a beautiful map of different icons of Florida state parks. Utilizing a simple 3-color system (Red, Yellow, Green) created a 
+                        simple yet effective way to show the user if a park was open or not. 
+                        <a href="https://github.com/gavinmcdavitt/StateParkApp" target="_blank" style="text-decoration: none; color: inherit;">Github</a>
+                    </span>
+                </div></li>
+                    <li><div class="card" id ='card-2' onclick="copyCardTextById('card-2')"><span class="model-name">SalesForce + PowerShell</span><span>
+                        I was searching through github, and found a very interesting <a href = "https://github.com/fleschutz/PowerShell"> repo </a> from <a href = "https://fleschutz.de/">Markus Fleschutz.</a> I really enjoyed,
+                        this repo. I had came home from work, and having to install the salesforce CLI to create LWCS, I found the process to be a hassle. I created this PowerShell
+                        code to make it easier for my fellow Trail Blazers. Clone the repo and follow the README file.
+                        <a href="https://github.com/gavinmcdavitt/Install-Salesforce-CLI-through-powershell" target="_new"> Github</a>
+                        
+                    </span></div></li>
+                    <li><div class="card" id ='card-3' onclick="copyCardTextById('card-3')"><span class="model-name">Web Scraping in Python</span><span>
+                        This is personally one of my favorite ways to solve a problem. It's super simple using Beautiful Soup 4, and you get to hunt
+                        down the internet for a webpage with the right styling to make your job easier. You quickly learn that you have will also need selenium
+                        to work correctly. Once you can use Beautiful Soup 4, I personally have used this in two of my favorite projects. The first was to scrape 
+                        <a href="https://github.com/gavinmcdavitt/Stock_price_Scraping" target="_new"> stock data. </a> The second was to have setup 
+                        code to get information about NFL games for my <a href="https://github.com/gavinmcdavitt/McDavitt-Walk-of-Shame" target="_new">family football league.</a>
+                    </span></div></li>
+                    <li>
+                        <div class="card" id ='card-4' onclick="copyCardTextById('card-4')"> <span class="model-name">Current Project</span>
+                            <span>
+                        I am currently training Einstein bots in salesforce. We as a team at CET ITS started with the creation of a Menu Bot, and have worked our ways
+                        to make it an <i>enhanced</i> bot. We then seeded the bot with closed case data and Knowledge articles so that it may be used to help students out.
+                        The goal is to make the bot from a menu click and have limited controls to being able to have full conversations.
+                    </span></a></div></li>
+                </ul>
+                <div class="last-circle"></div>
+                <div class="second-circle"></div>
+            </div>
+            <div class="mask"></div>
+            <div class="center-circle"></div>
+        </div>
+    </div>
+</body>
+</html>

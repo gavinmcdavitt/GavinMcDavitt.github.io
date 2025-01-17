@@ -47,7 +47,7 @@
     <div class="page-container">
         <!-- Flexbox container for interacting elements -->
         <div class="flexbox hidden">
-            <div class="flex-item">Item 1</div>
+            <div class="flex-item" id="FlexItem">Item 1</div>
         </div>
 
         <!-- Circular container -->
@@ -60,7 +60,8 @@
                         
                         Donec ornare velit eget consectetur euismod. Nullam ultrices sapien leo, nec consectetur quam dapibus sed. Curabitur placerat purus nec urna iaculis, feugiat sollicitudin dolor consectetur. Nunc a libero id metus auctor placerat quis et nisl. Integer orci quam, ultricies congue lorem non, ullamcorper imperdiet lectus. Fusce nunc quam, semper vel tempor in, dictum iaculis nisl. Donec consequat sollicitudin accumsan. Nam ut ligula eu dolor iaculis tristique. Proin aliquet ex dui, ut aliquam arcu sollicitudin eget. Sed non faucibus lectus. Curabitur fringilla est id quam mattis, sit amet suscipit neque aliquam. Phasellus fringilla lectus dolor, in dapibus sem condimentum ut. Aenean quis volutpat metus. Pellentesque vel ullamcorper nisi, in congue orci. Nunc ut sem sit amet tellus auctor laoreet. Maecenas ut aliquet massa.
                         
-                        Integer mattis velit sed enim faucibus bibendum. Aenean et orci enim. Pellentesque interdum arcu magna, eget auctor metus scelerisque sed. Mauris mattis posuere laoreet. Quisque at imperdiet quam, at viverra orci. Nunc ornare at purus eget efficitur. Praesent in orci massa. Suspendisse commodo ante arcu, in scelerisque urna aliquam eget. Curabitur varius egestas velit in convallis. Donec vehicula orci nec sem vestibulum, in pretium nunc viverra. Morbi ut elementum augue. Nulla fringilla egestas dapibus. Phasellus non convallis eros. Praesent nec consectetur velit. Sed ultricies lorem enim, sed volutpat diam tristique sed. Nunc sollicitudin non magna sit amet egestas. </span></a></div></li>
+                        Integer mattis velit sed enim faucibus bibendum. Aenean et orci enim. Pellentesque interdum arcu magna, eget auctor metus scelerisque sed. Mauris mattis posuere laoreet. Quisque at imperdiet quam, at viverra orci. Nunc ornare at purus eget efficitur. Praesent in orci massa. Suspendisse commodo ante arcu, in scelerisque urna aliquam eget. Curabitur varius egestas velit in convallis. Donec vehicula orci nec sem vestibulum, in pretium nunc viverra. Morbi ut elementum augue. Nulla fringilla egestas dapibus. Phasellus non convallis eros. Praesent nec consectetur velit. Sed ultricies lorem enim, sed volutpat diam tristique sed. Nunc sollicitudin non magna sit amet egestas. 
+                    </span></a></div></li>
                     <li><div class="card" id ='card-2' onclick="copyCardTextById('card-2')"><a><span class="model-name">Slide 2</span><span>
 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit tempor sapien, sit amet facilisis dui faucibus suscipit. Nunc erat dolor, imperdiet at est nec, eleifend tempor augue. Fusce dignissim est in est feugiat, eget commodo ex interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eleifend, quam at fermentum volutpat, tortor turpis condimentum lacus, vel tincidunt ipsum purus nec ante. Vivamus tempor dolor nec mollis semper. Phasellus pharetra ut purus a congue. Curabitur bibendum nunc id eros rutrum vestibulum. Morbi vel lorem diam.
@@ -71,13 +72,30 @@
                         
                         Pellentesque sit amet consectetur justo, placerat sagittis risus. Suspendisse luctus convallis ante eu suscipit. Etiam in quam cursus, sollicitudin sem sed, rhoncus purus. Donec pharetra ullamcorper maximus. Duis elementum pretium finibus. Etiam imperdiet posuere velit non fringilla. Sed et luctus magna. Integer feugiat enim in blandit tincidunt. Aliquam faucibus pulvinar lorem eleifend volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies leo diam, sed ultricies est blandit vel. Phasellus dapibus nisi in ipsum viverra varius. Donec blandit lorem nibh, a lacinia enim ornare at. Nulla dignissim metus enim, in pellentesque nulla lacinia sed. Sed auctor mattis accumsan.
                         
-                        Integer vitae molestie nisi. Duis ut purus posuere, molestie tellus id, tristique ante. Proin vehicula metus ante, et malesuada libero commodo at. Aliquam sollicitudin libero tincidunt ornare varius. Mauris risus ante, sagittis nec vehicula egestas, suscipit a urna. Vestibulum id mollis nunc. Donec nisl enim, vulputate vitae ex sagittis, eleifend blandit mauris. </span></a></div></li>
-                    <li><div class="card" id ='card-3' onclick="copyCardTextById('card-3')"><a><span class="model-name">Slide 3</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim libero et lorem suscipit semper. Vivamus finibus elementum orci ut commodo. Cras nec bibendum lorem. In hac habitasse platea dictumst. Donec condimentum turpis et fringilla bibendum. Vivamus dictum lobortis elementum. Suspendisse potenti. Nullam rhoncus eget leo non eleifend. Vestibulum nisi felis, dictum quis scelerisque non, aliquam rhoncus dui. Donec rutrum bibendum vulputate. Sed gravida, metus a tincidunt pharetra, lectus libero imperdiet magna, non porta eros justo in metus. Donec lobortis eros arcu, eget vestibulum quam facilisis a. Suspendisse vitae massa venenatis, dapibus ipsum in, eleifend eros. Donec efficitur nisi ac justo tincidunt gravida. </span></a></div></li>
-                    <li><div class="card" id ='card-4' onclick="copyCardTextById('card-4')"><a><span class="model-name">Slide 4</span><span>
+                        Integer vitae molestie nisi. Duis ut purus posuere, molestie tellus id, tristique ante. Proin vehicula metus ante, et malesuada libero commodo at. Aliquam sollicitudin libero tincidunt ornare varius. Mauris risus ante, sagittis nec vehicula egestas, suscipit a urna. Vestibulum id mollis nunc. Donec nisl enim, vulputate vitae ex sagittis, eleifend blandit mauris. 
+                    </span></a></div></li>
+                    <li><div class="card" id ='card-3' onclick="copyCardTextById('card-3')"><a><span class="model-name">Slide 3</span><span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim libero et lorem suscipit semper. Vivamus finibus elementum orci ut commodo. Cras nec bibendum lorem. In hac habitasse platea dictumst. Donec condimentum turpis et fringilla bibendum. Vivamus dictum lobortis elementum. Suspendisse potenti. Nullam rhoncus eget leo non eleifend. Vestibulum nisi felis, dictum quis scelerisque non, aliquam rhoncus dui. Donec rutrum bibendum vulputate. Sed gravida, metus a tincidunt pharetra, lectus libero imperdiet magna, non porta eros justo in metus. Donec lobortis eros arcu, eget vestibulum quam facilisis a. Suspendisse vitae massa venenatis, dapibus ipsum in, eleifend eros. Donec efficitur nisi ac justo tincidunt gravida. 
+                    </span></a></div></li>
+                    <li><div class="card" id ='card-4' onclick="copyCardTextById('card-4')"><a><div class="wave-text">
+                        <span>A</span>
+                        <span>C</span>
+                        <span>T</span>
+                        <span>I</span>
+                        <span>V</span>
+                        <span>E</span>
+                        <span>B</span>
+                        <span>U</span>
+                        <span>I</span>
+                        <span>L</span>
+                        <span>D</span>
+                        
+                    </div><span>
 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis, justo non hendrerit condimentum, nunc ligula convallis diam, eu elementum eros dolor ut lectus. Ut pharetra purus ex, eget sagittis libero auctor in. Donec id quam condimentum, placerat diam at, suscipit nisi. Vestibulum tincidunt quam ac vulputate bibendum. Vestibulum finibus eros eget lectus rhoncus maximus. Aliquam in tristique nibh, a consectetur tortor. Integer suscipit sem eget ex lacinia dignissim. Nunc tincidunt enim erat, vel posuere velit suscipit in. Vivamus pulvinar vel metus ut iaculis. Mauris interdum sodales suscipit. Proin faucibus eleifend magna.
                         
-                        Vivamus porttitor nibh eu diam mattis, in molestie nisl egestas. Vestibulum non nunc a ipsum fermentum tempor. Donec a pellentesque tellus, at sagittis dolor. Praesent odio libero, ullamcorper non aliquam id, suscipit a tortor. Quisque vel consequat enim. Aenean vestibulum, purus vel maximus condimentum, dui metus aliquet magna, commodo tincidunt libero justo id nisi. Fusce faucibus vehicula nibh, id aliquet orci tincidunt vel. Curabitur tincidunt massa eu erat tincidunt, at malesuada purus iaculis. Fusce efficitur iaculis ipsum id posuere. Maecenas varius tincidunt turpis quis congue. Nullam et eleifend risus. Praesent vestibulum tincidunt odio, id tristique nisl condimentum et. Duis sed nunc eget ipsum gravida molestie. Nam ultricies, felis eu condimentum eleifend, enim lorem placerat odio, et tempus dui nunc vitae enim. Vivamus lacinia risus faucibus elit finibus, sed rhoncus magna consectetur. </span></a></div></li>
+                        Vivamus porttitor nibh eu diam mattis, in molestie nisl egestas. Vestibulum non nunc a ipsum fermentum tempor. Donec a pellentesque tellus, at sagittis dolor. Praesent odio libero, ullamcorper non aliquam id, suscipit a tortor. Quisque vel consequat enim. Aenean vestibulum, purus vel maximus condimentum, dui metus aliquet magna, commodo tincidunt libero justo id nisi. Fusce faucibus vehicula nibh, id aliquet orci tincidunt vel. Curabitur tincidunt massa eu erat tincidunt, at malesuada purus iaculis. Fusce efficitur iaculis ipsum id posuere. Maecenas varius tincidunt turpis quis congue. Nullam et eleifend risus. Praesent vestibulum tincidunt odio, id tristique nisl condimentum et. Duis sed nunc eget ipsum gravida molestie. Nam ultricies, felis eu condimentum eleifend, enim lorem placerat odio, et tempus dui nunc vitae enim. Vivamus lacinia risus faucibus elit finibus, sed rhoncus magna consectetur. 
+                    </span></a></div></li>
                 </ul>
                 <div class="last-circle"></div>
                 <div class="second-circle"></div>
@@ -86,5 +104,7 @@
             <div class="center-circle"></div>
         </div>
     </div>
+
+    
 </body>
 </html>
