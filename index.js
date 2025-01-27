@@ -85,7 +85,10 @@ function copyCardTextById(id) {
             flexbox.style.justifyContent = 'center';
             flexbox.style.alignItems = 'center';
         }
-
+        if (overlayCard) {
+            // Remove the overlay card once it is clicked
+            overlayCard.remove();
+        }
         // Log to console for verification
         console.log('Updated flexbox with:', { modelName, otherContent });
     } else {
