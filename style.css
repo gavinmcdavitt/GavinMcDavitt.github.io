@@ -265,7 +265,7 @@ a {
 /* Navbar */
 .navbar {
     background-color: #333; 
-    padding: 1rem; /* Adds spacing */
+    padding: 1 rem; /* Adds spacing */
     position: sticky; /* Keeps the navbar visible at the top while scrolling. */
     top: 0;
     z-index: 1000; 
@@ -290,7 +290,6 @@ a {
 .nav-list a:hover {
     text-decoration: underline;
 }
-
 /* Sections */
 .section {
     padding: 3em 1em; 
@@ -459,10 +458,6 @@ body {
 .overlay-card:hover {
     background: rgba(0, 0, 0, 0.8); /* Slightly darker on hover */
 }
-
-
-
-
 .void a {
 	text-decoration: none;
 	color: unset;
@@ -597,11 +592,50 @@ body {
 
 #GithubCat{
     background-color: #ffff;
-    max-width: 50px;
+    max-width: 25px;
+    
 }
 #Trailheads{
-    max-width: 50px;
+    max-width: 25px;
 }
 #LinkedIn{
-    max-width: 50px;
+    max-width: 25px;
 }
+
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+  }
+  
+  .experience-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for card */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some subtle shadow */
+    width: calc(50% - 10px); /* Each card will take 50% of the space, with a gap of 10px */
+  }
+  
+  .experience-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .experience-card p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .experience-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .experience-card ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
