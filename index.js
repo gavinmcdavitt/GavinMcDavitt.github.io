@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const count = countInput.value;
         updateAnimationSpeedAndCount(speed, count);
     });
+
+
 });
 function copyCardTextById(id) {
     // Select the card element by its ID
@@ -53,7 +55,7 @@ function copyCardTextById(id) {
     if (card) {
         // Get the `model-name` text and other HTML content
         const modelName = card.querySelector('.model-name')?.textContent || '';
-
+        
         // Exclude the modelName (header) from otherContent by filtering out the span containing modelName
         let otherContent = [...card.querySelectorAll('span')]
             .filter(span => !span.classList.contains('model-name'))
@@ -85,9 +87,10 @@ function copyCardTextById(id) {
             flexbox.style.justifyContent = 'center';
             flexbox.style.alignItems = 'center';
         }
+        const overlayCard = card.querySelector('.overlay-card');
         if (overlayCard) {
-            // Remove the overlay card once it is clicked
-            overlayCard.remove();
+            // Set the overlay text to the model-name
+           overlayCard.remove();
         }
         // Log to console for verification
         console.log('Updated flexbox with:', { modelName, otherContent });
@@ -95,3 +98,24 @@ function copyCardTextById(id) {
         console.error('Card with ID', id, 'not found.');
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all the card elements on the page
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        // Get the model-name text from the card
+        const modelName = card.querySelector('.model-name')?.textContent || '';
+
+        // Get the overlay card element inside the card
+        const overlayCard = card.querySelector('.overlay-card');
+
+        if (overlayCard) {
+            // Set the overlay text to the model-name immediately
+            overlayCard.textContent = modelName;
+
+            // Hide the overlay after a brief transition
+            overlayCard.classList.add('done');
+        }
+    });
+});
