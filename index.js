@@ -23,7 +23,7 @@ function updateAnimationSpeedAndCount(rotateSpeed, count) {
 
     // Set CSS variables dynamically
     root.style.setProperty('--rotate-speed', 10);
-    root.style.setProperty('--count', 4);
+    root.style.setProperty('--count', 5);
 
     // Trigger a reflow to ensure the CSS changes take effect
     root.offsetHeight;
@@ -48,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 function copyCardTextById(id) {
     // Select the card element by its ID
     const card = document.getElementById(id);
-
+   
     if (card) {
         // Get the `model-name` text and other HTML content
         const modelName = card.querySelector('.model-name')?.textContent || '';
@@ -106,14 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
     cards.forEach(card => {
         // Get the model-name text from the card
         const modelName = card.querySelector('.model-name')?.textContent || '';
-
+        const cardOverlaySetByModelName = false;
         // Get the overlay card element inside the card
         const overlayCard = card.querySelector('.overlay-card');
 
         if (overlayCard) {
             // Set the overlay text to the model-name immediately
+           if(cardOverlaySetByModelName){
             overlayCard.textContent = modelName;
-
+           }
             // Hide the overlay after a brief transition
             overlayCard.classList.add('done');
         }

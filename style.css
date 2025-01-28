@@ -419,6 +419,11 @@ body {
 	color: #535062;
 	animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
 }
+.clickMe{
+    position:fixed;
+    top:10% auto;
+    left: 10%;
+}
 .overlay-card {
     position: absolute;
     top: 0;
@@ -428,7 +433,10 @@ body {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    font-family: 'Poppins', sans-serif;
+    font-family: "Rock 3D", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 311%;
     color: #fff;
     background: rgba(0, 0, 0,1); /* Optional: semi-transparent background */
     text-align: center; /* Ensure text is centered */
@@ -437,8 +445,8 @@ body {
     z-index: 2; /* Ensure the overlay is above the card content */
     transition: opacity 0.5s ease; /* Smooth transition for when the overlay fades out */
     overflow: hidden; /* Prevents the content from spilling out */
-    width: 100%;
-    height: 100%;
+    width: 87%;
+    height: 60%;
 }
 
 .overlay-card p {
@@ -449,8 +457,8 @@ body {
     word-wrap: break-word; /* Breaks words to prevent overflow */
     text-overflow: ellipsis; /* Adds '...' if the text overflows */
     overflow: auto; /* Allow scrolling if text overflows */
-    max-width: 100%; /* Adjust the max-width to make it more readable */
-    max-height: 100%; /* Ensure text fits well within the box */
+    max-width: fit-content; /* Adjust the max-width to make it more readable */
+    max-height:fit-content; /* Ensure text fits well within the box */
     line-height: 1.2; /* Set line height for better text readability */
     float: center;
 }
